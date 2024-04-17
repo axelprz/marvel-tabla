@@ -17,6 +17,6 @@
 - CSS
 ## Autores ✒️
 - Axel Perez [🔍](https://github.com/axelprz)
-- Leonardo Pelaytay
-- Juan Murua
-- Agustín Clavijo
+- Leonardo Pelaytay [🔍](https://github.com/LeoTheGoldenBoy)
+- Juan Murua [🔍](https://github.com/juanmm77)
+- Agustín Clavijo [🔍](https://github.com/AguusClavijo)

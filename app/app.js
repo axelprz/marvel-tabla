@@ -30,3 +30,26 @@ btnSiguiente.addEventListener("click", () => {
         cargarPersonajes();
     }
 });
+btnAnterior.addEventListener("click", () => {
+    if(numeroPagina > 1){
+        offset -= 20;
+        if(terminoBusqueda === ""){
+            url = `https://gateway.marvel.com:443/v1/public/characters?apikey=${apiKey}&ts=${ts}&hash=${hash}&offset=${offset}`;
+        }else{
+            url = `https://gateway.marvel.com:443/v1/public/characters?apikey=${apiKey}&ts=${ts}&hash=${hash}&offset=${offset}&nameStartsWith=${terminoBusqueda}`;
+        }
+        cargarPersonajes();
+    }
+})
+
+btnBuscar.addEventListener("click", (event) =>{
+    event.preventDefault();
+    offset = 0;
+    terminoBusqueda = document.getElementById("inputBuscar").value.trim();
+    if(terminoBusqueda != ""){
+        url = `https://gateway.marvel.com:443/v1/public/characters?apikey=${apiKey}&ts=${ts}&hash=${hash}&nameStartsWith=${terminoBusqueda}`;
+    }else{
+        alert("Por favor, ingrese un termino de búsqueda válido");
+    }
+    cargarPersonajes();
+});

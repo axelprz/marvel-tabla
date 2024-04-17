@@ -16,7 +16,7 @@
 - JAVASCRIPT
 - CSS
 ## Autores ✒️
-- Axel Perez
+- Axel Perez [🔍](https://github.com/axelprz)
 - Leonardo Pelaitay
 - Juan Murua
 - Agustín Clavijo

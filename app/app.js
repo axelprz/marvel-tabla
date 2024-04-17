@@ -53,3 +53,38 @@ btnBuscar.addEventListener("click", (event) =>{
     }
     cargarPersonajes();
 });
+
+const cargarPersonajes = async() => {
+    try{
+        const respuesta = await fetch(url);
+        
+        if(respuesta.status === 200){
+
+            const mostrarData = (datos) => {
+                let body = "";
+                for(let i = 0; i < datos.length; i++){
+                    try{
+                        comics = datos[i].urls[2].url;
+                    }catch(err){
+                        comics = datos[i].urls[1].url;
+                    }
+                    body += `<tr><td>${datos[i].id}</td><td>${datos[i].name}</td><td><img src="${datos[i].thumbnail.path}.${datos[i].thumbnail.extension}"/></td><td><a target="_blank" href="${comics}"><i class="bi bi-box-arrow-up-right"></i></a></td></tr>`
+                }
+                document.getElementById("data").innerHTML = body;
+                
+            }
+
+            const datos = await respuesta.json();
+            totalPersonajes = datos.data.total;
+            console.log(datos.data.results);
+            obtenerPagina();
+            mostrarData(datos.data.results);
+        }else{
+            console.log("Hubo un error");
+        }
+    }catch(error){
+        console.log(error);
+    }
+}
+
+cargarPersonajes();

@@ -1,0 +1,125 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+body{
+    background-color: red;
+}
+
+header{
+    background-color: black;
+    padding: 50px;
+    max-height: 200px;
+}
+
+header div h1{
+    color: #fff;
+    text-align: center;
+    display: block;
+}
+
+header .image{
+    display: flex;
+    justify-content: center;
+}
+
+header img{
+    width: auto;
+    height: 90px;
+}
+
+#busqueda{
+	background: darkred;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+}
+
+#busqueda button{
+	background-color: #fff;
+	color: red;
+	border: 3px solid red;
+}
+
+#busqueda button:hover{
+	background-color: red;
+	color: #fff;
+	border: 3px solid #fff;
+}
+
+i{
+	display: flex;
+    justify-content: center;
+    font-size: 20px;
+    color: black;
+}
+
+img{
+   width: 100px;
+   height: 100px; 
+}
+
+a{
+	text-decoration: none;
+	color: #fff;
+}
+
+.contenedor{
+    padding: 100px 300px;
+    align-items: center;
+}
+
+.contenedor table{
+    border: black 5px solid;
+}
+
+#integrantes{
+	padding: 500px;
+	padding-bottom: 200px;
+	padding-top: 5px;
+	align-content: center;
+}
+
+#integrantes th{
+	text-align: center;
+}
+
+#integrantes td{
+	text-align: center;
+}
+
+.paginacion {
+	position: fixed;
+	bottom: 0;
+	background: black;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	padding: 10px;
+}
+
+.paginacion p{
+	color: #fff;
+}
+
+.paginacion button {
+	cursor: pointer;
+	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	height: 50px;
+	width: 200px;
+	background: red;
+	color: #fff;
+	border-radius: 100px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	transition: .3s ease all;
+}
+
+.paginacion button:hover {
+	background: white;
+    color: red;
+}

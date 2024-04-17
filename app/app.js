@@ -11,3 +11,22 @@ let terminoBusqueda = "";
 let numeroPagina;
 let numeroMaxPagina;
 let comics;
+
+const obtenerPagina = () => {
+    numeroPagina = Math.floor(offset / 20 + 1);
+    numeroMaxPagina = Math.floor(totalPersonajes / 20 + 1);
+    const p = document.getElementById("numPagina");
+    p.innerText = `Página ${numeroPagina} de ${numeroMaxPagina}`;
+}
+
+btnSiguiente.addEventListener("click", () => {
+    if(numeroPagina < numeroMaxPagina){
+        offset += 20;
+        if(terminoBusqueda === ""){
+            url = `https://gateway.marvel.com:443/v1/public/characters?apikey=${apiKey}&ts=${ts}&hash=${hash}&offset=${offset}`;
+        }else{
+            url = `https://gateway.marvel.com:443/v1/public/characters?apikey=${apiKey}&ts=${ts}&hash=${hash}&offset=${offset}&nameStartsWith=${terminoBusqueda}`;
+        }
+        cargarPersonajes();
+    }
+});
